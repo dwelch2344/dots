@@ -1,0 +1,20 @@
+/* Styles go here */
+
+.face {
+  width: 48px;
+  margin: 16px;
+  border-radius: 48px;
+  border: 1px solid #ddd;
+}
+.md-button.md-fab {
+  width: 36px;
+  height: 36px;
+}
+.dot{
+	height: 10px;
+	width: 10px;
+	margin: 5px;
+	border-radius: 5px;
+	background: gray;	
+}
+.dot.dot-red{ background: red;}

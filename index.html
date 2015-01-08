@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html ng-app="webapp">
+
+<head>
+  <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/angular_material/0.6.1/angular-material.min.css">
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Angular Material Dependencies -->
+  <script src="//cdn.jsdelivr.net/hammerjs/2.0.4/hammer.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular-animate.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular-aria.min.js"></script>
+
+  <!-- Angular Material Javascript now available via Google CDN; version 0.6 used here -->
+  <script src="//ajax.googleapis.com/ajax/libs/angular_material/0.6.1/angular-material.min.js"></script>
+
+  <script src="script.js"></script>
+</head>
+
+<body ng-controller="AppCtrl">
+
+  <div layout="column" layout-fill>
+    <md-toolbar md-scroll-shrink>
+      <div class="md-toolbar-tools">
+        <div flex="50">
+          <h3 class="title"><span>My Title</span></h3>
+        </div>
+        <div flex="45" layout="" layout-align="end center">
+          <md-button class="md-fab" aria-label="Time">
+            <md-icon icon="/img/icons/ic_access_time_24px.svg" style="width: 24px; height: 24px;"></md-icon>
+          </md-button>
+        </div>
+      </div>
+    </md-toolbar>
+    
+    <md-content style="height: 600px;">
+      <div class="row" layout="column" layout-align="center center" ng-repeat="row in grid.rows">
+        <div layout="row" layout-align="center center">
+          <span class='dot dot-{{col.type}}' ng-repeat="col in row">
+            &nbsp;
+          </span>
+        </div>
+      </div>
+      <!-- <md-list>
+        <md-item ng-repeat="item in todos">
+          <md-item-content>
+            <div class="md-tile-left">
+              <img ng-src="{{item.face}}" alt="{{item.who}}" class="face">
+            </div>
+            <div class="md-tile-content">
+              <h3>{{item.what}}</h3>
+              <h4>{{item.who}}</h4>
+              <p>{{item.notes}}</p>
+            </div>
+          </md-item-content>
+          <md-divider inset></md-divider>
+        </md-item>
+      </md-list> -->
+    </md-content>
+  </div>
+
+</body>
+
+</html>
